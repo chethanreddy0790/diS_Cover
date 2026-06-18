@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Calendar - diS_Cover</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary": "#ffffff",
+                        "on-background": "#191c1e",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#2170e4",
+                        "primary": "#4F6DFF",
+                        "on-primary-fixed": "#001159",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#f7f9fb",
+                        "on-secondary-fixed": "#001a42",
+                        "on-secondary-fixed-variant": "#004395",
+                        "surface-container-low": "#f2f4f6",
+                        "tertiary-fixed-dim": "#c0c7d6",
+                        "tertiary": "#555c6a",
+                        "surface-container-high": "#e6e8ea",
+                        "surface": "#f7f9fb",
+                        "tertiary-fixed": "#dce2f3",
+                        "surface-tint": "#4F6DFF",
+                        "primary-fixed": "#dee1ff",
+                        "background": "#f7f9fb",
+                        "surface-dim": "#d8dadc",
+                        "outline-variant": "#c4c5d8",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#404754",
+                        "on-primary-fixed-variant": "#0031c5",
+                        "error": "#ba1a1a",
+                        "surface-container-highest": "#e0e3e5",
+                        "inverse-on-surface": "#eff1f3",
+                        "secondary-fixed-dim": "#adc6ff",
+                        "on-tertiary-container": "#fefcff",
+                        "inverse-primary": "#bac3ff",
+                        "surface-variant": "#e0e3e5",
+                        "on-tertiary-fixed": "#151c27",
+                        "surface-container": "#eceef0",
+                        "on-primary-container": "#fffbff",
+                        "on-surface-variant": "#444655",
+                        "on-tertiary": "#ffffff",
+                        "primary-container": "#4F6DFF",
+                        "on-secondary-container": "#fefcff",
+                        "on-primary": "#ffffff",
+                        "on-surface": "#191c1e",
+                        "primary-fixed-dim": "#bac3ff",
+                        "inverse-surface": "#2d3133",
+                        "secondary": "#0058be",
+                        "tertiary-container": "#6e7583",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed": "#d8e2ff",
+                        "outline": "#747687"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; background-color: #f7f9fb; }
+        .headline-font { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+        }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen antialiased pb-12">
+<!-- TopAppBar aligned with Home Feed Style -->
+<header class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl fixed top-0 w-full z-50 transition-colors shadow-sm shadow-slate-200/50 dark:shadow-none">
+<nav class="flex justify-between items-center px-6 py-4 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant" style="color: rgb(79, 109, 255);">menu</span>
+<h1 class="text-2xl font-extrabold tracking-tighter text-blue-600 dark:text-blue-400 headline-font" style="">Calendar</h1>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center overflow-hidden border border-slate-100">
+<img alt="User Avatar" class="w-full h-full object-cover" data-alt="minimalist 3d avatar of a young creative professional with short dark hair and stylish glasses on a soft grey background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDL5ZqyCllgR5a8NTypRMWTSwmoQv1ie0Il6dZvtVn0GUapULXIJppQW_rO9rToXdiyAGR_j4tBhkb_zw_dFPaCwQNsXA1Y_jmDwxkZ1iVN2gvenifpiANFgUFVUKCUF5v83YYgVd6Rd6EyukKk5eWjeZV6eT7QIeTalpNtXudq-YNsU1lvalFCJ9MfevySDygebgDtDX3ULnAHwTtgrYMRi832Env9xoBvH8ZVtwxd-ToUWsSpdjF5pTrG5HMMD_oShGt7sPsAYFU" style=""/>
+</div>
+</div>
+</nav>
+</header>
+<main class="pt-24 px-6 max-w-2xl mx-auto">
+<!-- Month Selector -->
+<section class="mt-4 flex items-center justify-between">
+<div>
+<span class="font-bold text-[10px] text-[#4F6DFF] uppercase tracking-[0.15em] headline-font" style="">Timeline</span>
+<h2 class="text-2xl font-extrabold tracking-tight headline-font" style="">April 2026</h2>
+</div>
+<div class="flex gap-2">
+<button class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center hover:bg-surface-container-highest transition-all active:scale-95 shadow-sm" style="">
+<span class="material-symbols-outlined text-on-surface" style="">chevron_left</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center hover:bg-surface-container-highest transition-all active:scale-95 shadow-sm" style="">
+<span class="material-symbols-outlined text-on-surface" style="">chevron_right</span>
+</button>
+</div>
+</section>
+<!-- Calendar Grid -->
+<section class="mt-8 bg-surface-container-lowest rounded-lg p-6 shadow-[0_12px_32px_0_rgba(25,28,30,0.04)]">
+<div class="calendar-grid text-center mb-4">
+<div class="font-bold text-[10px] text-outline uppercase tracking-widest headline-font" style="">Mon</div>
+<div class="font-bold text-[10px] text-outline uppercase tracking-widest headline-font" style="">Tue</div>
+<div class="font-bold text-[10px] text-outline uppercase tracking-widest headline-font" style="">Wed</div>
+<div class="font-bold text-[10px] text-outline uppercase tracking-widest headline-font" style="">Thu</div>
+<div class="font-bold text-[10px] text-outline uppercase tracking-widest headline-font" style="">Fri</div>
+<div class="font-bold text-[10px] text-outline uppercase tracking-widest headline-font" style="">Sat</div>
+<div class="font-bold text-[10px] text-outline uppercase tracking-widest headline-font" style="">Sun</div>
+</div>
+<div class="calendar-grid gap-y-2">
+<!-- Row 1 -->
+<div class="h-12 flex flex-col items-center justify-center opacity-30 text-sm mx-auto" style="">30</div>
+<div class="h-12 flex flex-col items-center justify-center opacity-30 text-sm mx-auto" style="">31</div>
+<div class="h-12 flex flex-col items-center justify-center text-sm font-semibold mx-auto" style="">1</div>
+<div class="h-12 flex flex-col items-center justify-center text-sm font-semibold relative border-2 border-[#4F6DFF]/20 rounded-full w-10 mx-auto" style="">
+                    2
+                    <span class="absolute bottom-1 w-1 h-1 bg-[#4F6DFF] rounded-full"></span>
+</div>
+<div class="h-12 flex flex-col items-center justify-center text-sm font-semibold mx-auto" style="">3</div>
+<div class="h-12 flex flex-col items-center justify-center text-sm font-semibold mx-auto" style="">4</div>
+<div class="h-12 flex flex-col items-center justify-center text-sm font-semibold mx-auto" style="">5</div>
+<!-- Row 2 -->
+<div class="h-12 flex flex-col items-center justify-center text-sm font-semibold relative border-2 border-[#4F6DFF]/20 rounded-full w-10 mx-auto" style="">
+                    6
+                    <span class="absolute bottom-1 w-1 h-1 bg-[#4F6DFF] rounded-full"></span>
+</div>
+<div class="h-12 flex flex-col items-center justify-center text-sm font-semibold mx-auto" style="">7</div>
+<div class="h-12 flex flex-col items-center justify-center text-sm font-semibold mx-auto" style="">8</div>
+<div class="h-12 flex flex-col items-center justify-center text-sm font-semibold relative border-2 border-[#4F6DFF]/20 rounded-full w-10 mx-auto" style="">
+                    9
+                    <span class="absolute bottom-1 w-1 h-1 bg-[#4F6DFF] rounded-full"></span>
+</div>
+<div class="h-12 flex flex-col items-center justify-center text-sm font-semibold mx-auto" style="">10</div>
+<div class="h-12 flex flex-col items-center justify-center text-sm font-semibold mx-auto" style="">11</div>
+<div class="h-12 flex flex-col items-center justify-center text-sm font-semibold mx-auto" style="">12</div>
+<!-- Row 3 -->
+<div class="h-12 flex flex-col items-center justify-center text-sm font-semibold mx-auto" style="">13</div>
+<div class="h-12 flex flex-col items-center justify-center text-sm font-semibold mx-auto" style="">14</div>
+<div class="h-12 flex flex-col items-center justify-center mx-auto">
+<div class="w-10 h-10 bg-gradient-to-br from-[#4F6DFF] to-[#3B82F6] text-white rounded-full flex items-center justify-center shadow-lg shadow-[#4F6DFF]/20 font-bold text-sm" style="">15</div>
+</div>
+<div class="h-12 flex flex-col items-center justify-center text-sm font-semibold mx-auto" style="">16</div>
+<div class="h-12 flex flex-col items-center justify-center text-sm font-semibold mx-auto" style="">17</div>
+<div class="h-12 flex flex-col items-center justify-center text-sm font-semibold relative border-2 border-[#FF6B6B]/20 rounded-full w-10 mx-auto" style="">
+                    18
+                    <span class="absolute bottom-1 w-1 h-1 bg-[#4F6DFF] rounded-full" style="background-color: #FF6B6B;"></span>
+</div>
+<div class="h-12 flex flex-col items-center justify-center text-sm font-semibold mx-auto" style="">19</div>
+<!-- Row 4 -->
+<div class="h-12 flex flex-col items-center justify-center text-sm font-semibold mx-auto" style="">20</div>
+<div class="h-12 flex flex-col items-center justify-center text-sm font-semibold relative border-2 border-[#FF6B6B]/20 rounded-full w-10 mx-auto" style="">
+                    21
+                    <span class="absolute bottom-1 w-1 h-1 bg-[#4F6DFF] rounded-full" style="background-color: #FF6B6B;"></span>
+</div>
+<div class="h-12 flex flex-col items-center justify-center text-sm font-semibold mx-auto" style="">22</div>
+<div class="h-12 flex flex-col items-center justify-center text-sm font-semibold mx-auto" style="">23</div>
+<div class="h-12 flex flex-col items-center justify-center text-sm font-semibold relative border-2 border-[#4F6DFF]/20 rounded-full w-10 mx-auto" style="">
+                    24
+                    <span class="absolute bottom-1 w-1 h-1 bg-[#4F6DFF] rounded-full"></span>
+</div>
+<div class="h-12 flex flex-col items-center justify-center text-sm font-semibold mx-auto" style="">25</div>
+<div class="h-12 flex flex-col items-center justify-center text-sm font-semibold mx-auto" style="">26</div>
+</div>
+</section>
+<!-- Events for Date -->
+<section class="mt-10">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-xl font-extrabold headline-font tracking-tight" style="">Events for April 15</h3>
+<span class="text-sm font-semibold text-outline" style="">3 items</span>
+</div>
+<div class="space-y-4">
+<!-- Event Card 1 -->
+<div class="bg-surface-container-lowest p-5 rounded-lg flex items-center gap-4 transition-all active:scale-[0.98] shadow-sm shadow-slate-200/50">
+<div class="w-12 h-12 rounded-2xl bg-[#4F6DFF]/10 flex flex-col items-center justify-center text-[#4F6DFF]" style="background-color: rgba(255, 107, 107, 0.1); color: #FF6B6B;">
+<span class="text-[10px] font-bold uppercase" style="">09:00</span>
+<span class="text-[10px] font-bold uppercase" style="">AM</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-1">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-low text-[10px] font-bold uppercase text-[#4F6DFF] headline-font" style="color: #FF6B6B;">Workshop</span>
+</div>
+<h4 class="font-bold text-md text-on-surface" style="">Creative Portfolio Review</h4>
+</div>
+<button class="text-outline hover:text-[#4F6DFF]" style="">
+<span class="material-symbols-outlined" style="">more_vert</span>
+</button>
+</div>
+<!-- Event Card 2 -->
+<div class="bg-surface-container-lowest p-5 rounded-lg flex items-center gap-4 transition-all active:scale-[0.98] shadow-sm shadow-slate-200/50">
+<div class="w-12 h-12 rounded-2xl bg-[#4F6DFF]/10 flex flex-col items-center justify-center text-[#4F6DFF]" style="background-color: rgba(255, 107, 107, 0.1); color: #FF6B6B;">
+<span class="text-[10px] font-bold uppercase" style="">02:30</span>
+<span class="text-[10px] font-bold uppercase" style="">PM</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-1">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-low text-[10px] font-bold uppercase text-[#4F6DFF] headline-font" style="color: #FF6B6B;">Seminar</span>
+</div>
+<h4 class="font-bold text-md text-on-surface" style="">AI in Modern Curating</h4>
+</div>
+<button class="text-outline hover:text-[#4F6DFF]" style="">
+<span class="material-symbols-outlined" style="">more_vert</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Upcoming Events -->
+<section class="mt-12 mb-8">
+<div class="flex items-center justify-between mb-6">
+<h2 class="headline-font font-extrabold text-xl tracking-tight flex items-center gap-2" style="">
+<span class="w-2 h-6 bg-[#4F6DFF] rounded-full"></span>
+                    Upcoming Events
+                </h2>
+<button class="text-[#4F6DFF] font-bold text-sm" style="">View All</button>
+</div>
+<div class="flex overflow-x-auto gap-4 pb-4 -mx-6 px-6 no-scrollbar">
+<!-- Featured Card 1 -->
+<div class="min-w-[280px] bg-surface-container-lowest rounded-lg overflow-hidden flex flex-col shadow-sm shadow-slate-200/50">
+<div class="h-32 w-full bg-surface-container-highest relative">
+<img alt="Tech Event" class="w-full h-full object-cover" data-alt="vibrant neon lights of a futuristic technology conference stage with people silhouetted in the foreground" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDv0vEwFYTgqiehFVnyoiaJzJD4ItOyYt1Dh84VvbFmEgRfpgEGbz179xRI_uDg5lG46uuMXR3O8-xWYnzjuebnVB0AxTpnnuhky_UuNwL3CnPbQLxZNfi5r2xRHEW3u8IBpWxMW7gxkik6bypn3F4yDR7lluzCByoxm7Lw1RrKjXHlwzUhueq9qv_sYl8vafE7hIuq_7Zna4kg0SItfjGIx8_Wpe2fLGfxtv2qP3eobEwa1o8Sw6A-ApAeds4E6QZ6isFzmFbqDX0" style=""/>
+<div class="absolute top-3 left-3 bg-[#4F6DFF] text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest shadow-lg" style="background-color: #FF6B6B;">Featured</div>
+</div>
+<div class="p-4">
+<h4 class="font-bold text-lg headline-font leading-tight mb-1" style="">TechNova Hackathon</h4>
+<p class="text-xs text-outline font-medium" style="">April 22 • 48 Hours</p>
+</div>
+</div>
+<!-- Featured Card 2 -->
+<div class="min-w-[280px] bg-surface-container-lowest rounded-lg overflow-hidden flex flex-col shadow-sm shadow-slate-200/50">
+<div class="h-32 w-full bg-surface-container-highest relative">
+<img alt="Arts Festival" class="w-full h-full object-cover" data-alt="colorful streamers and confetti falling during a bright daytime outdoor art festival with people dancing in soft focus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBh0K65cxnGBX5zNIo5dMCgkl1lIj1A2nkPgbW-xG-rbdgTJHLauhgo0olCRHmEyMenvphiFii7cszRk0GivEoV7CqjQXkJn0GJL6EytmrXe6qDZ6Rp606zHSai5_jSUL7I6yOqZTaON2togWUws39YSq1SFGC3ouEFA62g41RTvMEio3NRAdZ-WGy25UjlCWO8ArZP98XvvAx6-vTBc9mNrFH7pmR8u9GUfkMt1X99M76FFxRPRPBLIc7malSLpXaIF1olutydEkc" style=""/>
+<div class="absolute top-3 left-3 bg-[#4F6DFF] text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest shadow-lg" style="">Global Arts</div>
+</div>
+<div class="p-4">
+<h4 class="font-bold text-lg headline-font leading-tight mb-1" style="">Global Arts Fest</h4>
+<p class="text-xs text-outline font-medium" style="">May 05 • Main Plaza</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- FAB -->
+<div class="fixed right-6 z-50 bottom-6">
+<button class="w-14 h-14 rounded-full bg-gradient-to-br from-[#4F6DFF] to-[#3B82F6] text-white shadow-xl shadow-[#4F6DFF]/30 flex items-center justify-center active:scale-90 transition-transform" style="">
+<span class="material-symbols-outlined text-2xl" style='font-variation-settings: "FILL" 1;'>add_box</span>
+</button>
+</div>
+<!-- Unified Bottom Navigation Bar -->
+</body></html>

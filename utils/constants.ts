@@ -1,0 +1,9 @@
+export const APP_NAME = "Dis-cover";
+export const MOCK_DB_STORAGE_KEY = "campus-circle/mock-db-v1"; // Kept to avoid invalidating mock data as Fix 8 deletion failed/is pending
+export const PAGE_SIZE = 4;
+export const MIN_PASSWORD_LENGTH = 8;
+export const MAX_POST_DESCRIPTION_LENGTH = 500;
+export const MAX_BIO_LENGTH = 120;
+export const MAX_HEADLINE_LENGTH = 80;
+export const COLLEGE_EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.(edu|ac\.[a-z]{2}|edu\.[a-z]{2})$/i;
+export const ALLOWED_COLLEGE_DOMAINS: string[] = ['caias.in'];

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary": "#ffffff",
+                        "on-background": "#191c1e",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#2170e4",
+                        "primary": "#284ade",
+                        "on-primary-fixed": "#001159",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#f7f9fb",
+                        "on-secondary-fixed": "#001a42",
+                        "on-secondary-fixed-variant": "#004395",
+                        "surface-container-low": "#f2f4f6",
+                        "tertiary-fixed-dim": "#c0c7d6",
+                        "tertiary": "#555c6a",
+                        "surface-container-high": "#e6e8ea",
+                        "surface": "#f7f9fb",
+                        "tertiary-fixed": "#dce2f3",
+                        "surface-tint": "#2c4de1",
+                        "primary-fixed": "#dee1ff",
+                        "background": "#f7f9fb",
+                        "surface-dim": "#d8dadc",
+                        "outline-variant": "#c4c5d8",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#404754",
+                        "on-primary-fixed-variant": "#0031c5",
+                        "error": "#ba1a1a",
+                        "surface-container-highest": "#e0e3e5",
+                        "inverse-on-surface": "#eff1f3",
+                        "secondary-fixed-dim": "#adc6ff",
+                        "on-tertiary-container": "#fefcff",
+                        "inverse-primary": "#bac3ff",
+                        "surface-variant": "#e0e3e5",
+                        "on-tertiary-fixed": "#151c27",
+                        "surface-container": "#eceef0",
+                        "on-primary-container": "#fffbff",
+                        "on-surface-variant": "#444655",
+                        "on-tertiary": "#ffffff",
+                        "primary-container": "#4766f8",
+                        "on-secondary-container": "#fefcff",
+                        "on-primary": "#ffffff",
+                        "on-surface": "#191c1e",
+                        "primary-fixed-dim": "#bac3ff",
+                        "inverse-surface": "#2d3133",
+                        "secondary": "#0058be",
+                        "tertiary-container": "#6e7583",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed": "#d8e2ff",
+                        "outline": "#747687"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; background-color: #f7f9fb; }
+        .headline-font { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="text-on-surface bg-surface antialiased pb-24">
+<!-- TopAppBar -->
+<header class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl fixed top-0 w-full z-50 transition-colors shadow-sm shadow-slate-200/50 dark:shadow-none">
+<nav class="flex justify-between items-center px-6 py-4 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="menu" style="color: #4F6DFF;">menu</span>
+<h1 class="text-2xl font-extrabold tracking-tighter text-blue-600 dark:text-blue-400 headline-font">diS_Cover</h1>
+</div>
+<div class="flex items-center gap-5">
+<div class="hidden md:flex items-center bg-surface-container-low px-4 py-2 rounded-full">
+<span class="material-symbols-outlined text-on-surface-variant text-xl" data-icon="search" style="color: #4F6DFF;">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm ml-2 w-64 placeholder-on-surface-variant" placeholder="Explore events..." type="text"/>
+</div>
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-slate-50 dark:hover:bg-slate-800 transition-all scale-95 duration-200 ease-in-out">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="search" style="color: #4F6DFF;">search</span>
+</button>
+</div>
+</nav>
+</header>
+<main class="pt-24 max-w-2xl mx-auto px-4 md:px-0">
+<!-- Horizontal Scroll Stories: Event Categories -->
+<section class="mb-8">
+<div class="flex overflow-x-auto gap-6 pb-2 scrollbar-hide">
+<!-- Category Item -->
+<div class="flex-shrink-0 flex flex-col items-center gap-2 group cursor-pointer">
+<div class="p-[3px] rounded-full bg-gradient-to-tr from-primary to-secondary-container">
+<div class="bg-white p-1 rounded-full">
+<div class="w-16 h-16 rounded-full overflow-hidden bg-surface-container-high flex items-center justify-center">
+<img alt="Hackathons" class="w-full h-full object-cover" data-alt="vibrant neon lit technology workspace with multiple monitors and code lines glowing in dark room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCb7pbXPlRLZooigfy4gD8tqOemQXEwXuyDv6xU2WhcROre4DzQb8dmIshXMDEp8C8O5jeV8o9bH1l5LR6xzodJUb3gWcO69d-J9bNpJCr-m1TrRRL_3BPMF7ezj_noUeaS4XibnKHfcv8KF2YV7tS3fMhi0_a3PD_ldGYmzHzgrS5odT7jPJmt2ojvGiXkMEBGaV7Ku-gUiNerbDN9Cl-V8wGiqKDrjaJkbKydBI4eGj_RnGnyW2rTMCwLYskzUjmbT2n7N3O-NL4"/>
+</div>
+</div>
+</div>
+<span class="text-[11px] font-bold text-on-surface-variant headline-font uppercase tracking-wider">Hackathons</span>
+</div>
+<div class="flex-shrink-0 flex flex-col items-center gap-2 group cursor-pointer">
+<div class="p-[3px] rounded-full bg-gradient-to-tr from-primary to-secondary-container">
+<div class="bg-white p-1 rounded-full">
+<div class="w-16 h-16 rounded-full overflow-hidden bg-surface-container-high flex items-center justify-center">
+<img alt="Workshops" class="w-full h-full object-cover" data-alt="group of students collaborating around a wooden table with laptops and coffee cups in bright modern airy workshop space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSjFQ7C3jWJD9dmvQeh5ZH0vC8FtOwzYWSDhTDU95e5Q_Np9-kwAdeURMNxvADzQ0ZCm7Z64FcWzPckGT3n6M4Zu2ve2h0vObOmw2BdINDJ8VUdrliiUID0VWJjWvwgViVV0diNo1sgYevii_V0kjDvVcFlStwv27Vqx02fyAza65QX6oykuNjn2q9h4YSyzNNg9IsRaXF6NHgvi_qeBs7PDvistkBVEXXVo1fosXTcgYVZdK1TzGQaSY8x99pn_wfbeQYzxRqhf0"/>
+</div>
+</div>
+</div>
+<span class="text-[11px] font-bold text-on-surface-variant headline-font uppercase tracking-wider">Workshops</span>
+</div>
+<div class="flex-shrink-0 flex flex-col items-center gap-2 group cursor-pointer">
+<div class="p-[3px] rounded-full bg-gradient-to-tr from-primary to-secondary-container">
+<div class="bg-white p-1 rounded-full">
+<div class="w-16 h-16 rounded-full overflow-hidden bg-surface-container-high flex items-center justify-center">
+<img alt="Cultural" class="w-full h-full object-cover" data-alt="vibrant multi-colored lights reflecting on a stage floor during a cultural festival performance at night" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGpIUzK-cbee-jOVBr9dcg2Q3rOPxHzxByJySibEw13d1mn64UOMGeLebTPVVzemZz09It6C5-ySx7HQ3SAys-L7ecZRAMUDVCA0Q6phS-XLpNg-OJqwmK7bmFoUe71KhxgyUc31SHFcv-niOG6PA-yFyNDp9L3j-Z3ZZIpM7h7i6JrdExGTcXSTvXn-Bx7cluw5hctFGZbp144usVAIL7pAY4p0zn5-ODvNHxTTk6umes4TISGd0Si3lvVWqtmdkuCOCTkbx4C4Q"/>
+</div>
+</div>
+</div>
+<span class="text-[11px] font-bold text-on-surface-variant headline-font uppercase tracking-wider">Cultural</span>
+</div>
+<div class="flex-shrink-0 flex flex-col items-center gap-2 group cursor-pointer">
+<div class="p-[3px] rounded-full bg-gradient-to-tr from-primary to-secondary-container">
+<div class="bg-white p-1 rounded-full">
+<div class="w-16 h-16 rounded-full overflow-hidden bg-surface-container-high flex items-center justify-center">
+<img alt="Tech" class="w-full h-full object-cover" data-alt="futuristic circuit board glowing with blue light patterns and intricate microchip details" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKPcSCQIHwO-7bf3jWRLf_svdQ3ufT4I8EIquaDxZsG_UQMB6oX-hg-KMB9huFiSf1tefJ6JoBfLBX8cYA0IFOyR8WnaK8G-A08yTAhT-r6QcMH_efN2YliXrDg167xuyQmhhUevjXrZvE53vHHPRGkXp3qt6XHJfHWBi9ChE1feAsSWYoHbEuTuMIHQuW5EoLc1Cv4oI8uELsJhoBP1Mk7qVyPi-bL97NdHlfcZgPnpCgkgApqtqd1RsuCTIvfRbY6zVOkFujCmg"/>
+</div>
+</div>
+</div>
+<span class="text-[11px] font-bold text-on-surface-variant headline-font uppercase tracking-wider">Tech</span>
+</div>
+<div class="flex-shrink-0 flex flex-col items-center gap-2 group cursor-pointer">
+<div class="p-[3px] rounded-full bg-slate-200">
+<div class="bg-white p-1 rounded-full">
+<div class="w-16 h-16 rounded-full overflow-hidden bg-surface-container-low flex items-center justify-center">
+<span class="material-symbols-outlined text-slate-400" data-icon="add">add</span>
+</div>
+</div>
+</div>
+<span class="text-[11px] font-bold text-slate-400 headline-font uppercase tracking-wider">Suggest</span>
+</div>
+</div>
+</section>
+<!-- Feed Posts -->
+<div class="space-y-10">
+<!-- Trending Header -->
+<div class="flex items-center justify-between">
+<h2 class="headline-font font-bold text-lg tracking-tight flex items-center gap-2">
+<span class="w-2 h-6 bg-primary rounded-full"></span>
+                    Trending Events
+                </h2>
+<button class="text-primary font-semibold text-sm">See all</button>
+</div>
+<!-- Post Card 1 -->
+<article class="bg-surface-container-lowest rounded-lg overflow-hidden transition-all duration-300">
+<div class="px-4 py-3 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container-low">
+<img alt="Organizer" class="w-full h-full object-cover" data-alt="modern tech company logo architectural photography of a glass corporate building entrance" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3FDi8ZuXni8Ab4435JwEJ3dTXrSQZtBXHC-iMv0C2VVj5WAh9A4qDxbTPobbkuR4kUOT2obzQ86l_lcBqCJ1rix_M_dSSydnQgNMQcEemxBL4foxbSyYNaKCJANwgVIDKFZveZZlrh-JvpCpNCnj7y99aTXM4O0yit69ikMvq7P5X6CMv7rNEC9Ro1PI7od-wq7mh-6Sjbl6_i9bWMUqztLvozy-8gMEqFWbnVCEFqNMgZYx_pgudvQhto-GB9S_P1RFJb2g__zk"/>
+</div>
+<div>
+<h3 class="font-bold text-sm text-on-surface tracking-tight">TechNova Society</h3>
+<p class="text-[10px] text-on-surface-variant font-medium">IIT Bombay • 2 hours ago</p>
+</div>
+</div>
+<button class="p-2 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="more_horiz">more_horiz</span>
+</button>
+</div>
+<a class="block" href="{{DATA:SCREEN:SCREEN_8}}">
+<div class="px-4 relative group">
+<div class="rounded-lg overflow-hidden aspect-[4/5] bg-surface-container-low">
+<img alt="Event Poster" class="w-full h-full object-cover" data-alt="energetic hackathon event with programmers intensely focused on laptops in a sleek modern atrium with blue accent lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC75AK5GlsiKmsVXFMt_qfrsr_WuavmkArlUKNnYimGe6D1RGOsGgN7GJJBVk7KZ7s__9JMh0LjzlUsh00HXuNZOkBl4GII7jVD31mjTVceeozb-DLlTdGoG1o2ttOYMqXidVZBshI89N_-RXpp8jwN8KHQRQry2iOkcYzy5QpkEc_hgkc4TeBgqd5zwZROmmMs_rmSvsm66vhLz4UW5GVDmTRkqcjsz-_nW11cfFFMGBuuiyviaPhRhww6YNgqDaS1edOm4TkdEw0"/>
+</div>
+<!-- Badges -->
+<div class="absolute top-6 left-8 flex flex-col gap-2">
+<span class="bg-primary px-3 py-1.5 rounded-full text-[10px] font-bold text-white uppercase tracking-widest shadow-lg shadow-primary/20">Trending</span>
+<span class="bg-error px-3 py-1.5 rounded-full text-[10px] font-bold text-white uppercase tracking-widest shadow-lg shadow-error/20">Deadline Soon</span>
+</div>
+</div>
+<div class="px-4 py-4">
+<div class="flex justify-between items-start mb-3">
+<div>
+<h2 class="headline-font text-xl font-extrabold tracking-tight mb-1">Code-a-thon 2024</h2>
+<div class="flex items-center gap-2 mb-2">
+<span class="bg-surface-container-low px-2 py-0.5 rounded text-[10px] font-bold text-on-surface-variant headline-font uppercase">Hackathon</span>
+<span class="text-xs text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="location_on">location_on</span> Main Auditorium
+                                </span>
+</div>
+</div>
+<div class="bg-surface-container-low p-2 rounded-lg flex flex-col items-center min-w-[50px]">
+<span class="text-[10px] font-bold text-primary uppercase headline-font">Oct</span>
+<span class="text-xl font-black text-on-surface headline-font -mt-1">24</span>
+</div>
+</div>
+<p class="text-sm text-on-surface-variant line-clamp-2 mb-4 leading-relaxed">
+                        Join the biggest 24-hour innovation sprint in the city. Solve real-world challenges and win prizes worth $5000+ and exclusive mentorship.
+                    <span class="text-primary font-semibold ml-1 cursor-pointer">View More</span></p>
+<div class="flex items-center justify-between pt-2 border-t border-slate-100">
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="favorite" style="color: #4F6DFF;">favorite</span>
+<span class="text-xs font-bold">420</span>
+</button>
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="chat_bubble" style="color: #3B82F6;">chat_bubble</span>
+<span class="text-xs font-bold">24</span>
+</button>
+</div>
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="bookmark" style="color: #2563EB;">bookmark</span>
+</button>
+</div></div>
+</a>
+</article>
+<!-- Post Card 2 -->
+<article class="bg-surface-container-lowest rounded-lg overflow-hidden transition-all duration-300">
+<div class="px-4 py-3 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container-low">
+<img alt="Organizer" class="w-full h-full object-cover" data-alt="close-up of vibrant colorful paper lanterns floating at a cultural festival" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARa2kWD5K1dQIrcI1J77zqzp2YaOLkXOiv7VmnGBFBUL_n0J8HzWYIb-z3zM1gqugY3Qkl4K_OdBAQeLAosRs_Wp1VqrDDexTn_lXtTBQHvTap_iOOZ1V-5f5kN-8y_6_jABJ8cqLKu57AcaoasCIPuRwwvddRvwaWInRifUk1iCcf3PnKigoaCR0UqeYzwJKU2ZIB1U7Vg4OEeJLMfpEr3eL6o_Tl7E1HPfocWZcBcgt2Kg1i41u_0Id1xvx_jpU7Pyq1D6IeaLQ"/>
+</div>
+<div>
+<h3 class="font-bold text-sm text-on-surface tracking-tight">Global Arts Collective</h3>
+<p class="text-[10px] text-on-surface-variant font-medium">St. Xavier's College • 5 hours ago</p>
+</div>
+</div>
+<button class="p-2 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="more_horiz">more_horiz</span>
+</button>
+</div>
+<div class="px-4 relative">
+<div class="rounded-lg overflow-hidden aspect-video bg-surface-container-low">
+<img alt="Event Poster" class="w-full h-full object-cover" data-alt="energetic crowd with hands raised at an outdoor music festival with golden sunset light and warm atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAneHb1dcwK4MPlKgKCd8nPNOEdK_wvPIis2LUCxnLt8Xk5Y3C8dX3Yfw5TU84CUbt112bCO0byMPvDJOcmM61oXTA1ggFXHjCxhvvqqIEgCD1jdHeuxUytTzxhCO4HGjWLpzcjmiH3sMY8NmGdurusMu1e76i3sMXtVQMAP6ecD0jHnnqJvENpW297qAsVIcizAsaVfI-fJkffBpAI4pKK5CtmAw8tJd5lFPsCI90u-Sn-rdkeWLCNN_bkSLeWVoEdGlt_jNg6bI"/>
+</div>
+<div class="absolute top-6 left-8">
+<span class="bg-primary-container px-3 py-1.5 rounded-full text-[10px] font-bold text-white uppercase tracking-widest shadow-lg shadow-primary-container/20">New Addition</span>
+</div>
+</div>
+<div class="px-4 py-4">
+<div class="flex justify-between items-start mb-3">
+<div>
+<h2 class="headline-font text-xl font-extrabold tracking-tight mb-1">Rhythm &amp; Roots Fest</h2>
+<div class="flex items-center gap-2 mb-2">
+<span class="bg-surface-container-low px-2 py-0.5 rounded text-[10px] font-bold text-on-surface-variant headline-font uppercase">Cultural</span>
+<span class="text-xs text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="location_on">location_on</span> Open Grounds
+                                </span>
+</div>
+</div>
+<div class="bg-surface-container-low p-2 rounded-lg flex flex-col items-center min-w-[50px]">
+<span class="text-[10px] font-bold text-primary uppercase headline-font">Nov</span>
+<span class="text-xl font-black text-on-surface headline-font -mt-1">05</span>
+</div>
+</div>
+<p class="text-sm text-on-surface-variant line-clamp-2 mb-4 leading-relaxed">
+                        A celebration of folk music, traditional dance, and global cuisines. Witness artists from 10 different countries performing live!
+                    <span class="text-primary font-semibold ml-1 cursor-pointer">View More</span></p>
+<div class="flex items-center justify-between pt-2 border-t border-slate-100">
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="favorite" style="color: #4F6DFF;">favorite</span>
+<span class="text-xs font-bold">856</span>
+</button>
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="chat_bubble" style="color: #3B82F6;">chat_bubble</span>
+<span class="text-xs font-bold">12</span>
+</button>
+</div>
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="bookmark" style="color: #2563EB;">bookmark</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pt-3 pb-6 bg-white/90 dark:bg-slate-950/90 backdrop-blur-2xl z-50 rounded-t-[2.5rem] shadow-[0_-8px_30px_rgb(0,0,0,0.04)] border-t border-slate-100 dark:border-slate-800">
+<button class="flex flex-col items-center justify-center dark:text-blue-400 transition-transform tap-highlight-none transform active:scale-90" style="color: #4F6DFF;">
+<span class="material-symbols-outlined" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="label-font font-semibold text-[10px] tracking-wide mt-1">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center dark:text-slate-600 hover:text-blue-500 transition-colors tap-highlight-none transform active:scale-90" style="color: #4F6DFF;">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+<span class="label-font font-semibold text-[10px] tracking-wide mt-1">Calendar</span>
+</button>
+<a class="flex flex-col items-center justify-center -mt-10 bg-gradient-to-br from-primary to-primary-container p-4 rounded-full text-white shadow-xl shadow-primary/30 transform active:scale-95 transition-all" href="{{DATA:SCREEN:SCREEN_13}}">
+<span class="material-symbols-outlined" data-icon="add_box" style="font-variation-settings: 'FILL' 1;">add_box</span>
+</a>
+<button class="flex flex-col items-center justify-center dark:text-slate-600 hover:text-blue-500 transition-colors tap-highlight-none transform active:scale-90" style="color: #4F6DFF;">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="label-font font-semibold text-[10px] tracking-wide mt-1">Alerts</span>
+</button>
+<button class="flex flex-col items-center justify-center dark:text-slate-600 hover:text-blue-500 transition-colors tap-highlight-none transform active:scale-90" style="color: #4F6DFF;">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="label-font font-semibold text-[10px] tracking-wide mt-1">Profile</span>
+</button>
+</nav>
+</body></html>

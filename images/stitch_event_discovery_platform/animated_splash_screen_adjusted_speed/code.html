@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>diS_Cover | Welcome</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&amp;family=Manrope:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary": "#ffffff",
+                        "on-background": "#191c1e",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#2170e4",
+                        "primary": "#4F6DFF",
+                        "on-primary-fixed": "#001159",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#f7f9fb",
+                        "on-secondary-fixed": "#001a42",
+                        "on-secondary-fixed-variant": "#004395",
+                        "surface-container-low": "#f2f4f6",
+                        "tertiary-fixed-dim": "#c0c7d6",
+                        "tertiary": "#555c6a",
+                        "surface-container-high": "#e6e8ea",
+                        "surface": "#f7f9fb",
+                        "tertiary-fixed": "#dce2f3",
+                        "surface-tint": "#4F6DFF",
+                        "primary-fixed": "#dee1ff",
+                        "background": "#f7f9fb",
+                        "surface-dim": "#d8dadc",
+                        "outline-variant": "#c4c5d8",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#404754",
+                        "on-primary-fixed-variant": "#0031c5",
+                        "error": "#ba1a1a",
+                        "surface-container-highest": "#e0e3e5",
+                        "inverse-on-surface": "#eff1f3",
+                        "secondary-fixed-dim": "#adc6ff",
+                        "on-tertiary-container": "#fefcff",
+                        "inverse-primary": "#bac3ff",
+                        "surface-variant": "#e0e3e5",
+                        "on-tertiary-fixed": "#151c27",
+                        "surface-container": "#eceef0",
+                        "on-primary-container": "#fffbff",
+                        "on-surface-variant": "#444655",
+                        "on-tertiary": "#ffffff",
+                        "primary-container": "#4F6DFF",
+                        "on-secondary-container": "#fefcff",
+                        "on-primary": "#ffffff",
+                        "on-surface": "#191c1e",
+                        "primary-fixed-dim": "#bac3ff",
+                        "inverse-surface": "#2d3133",
+                        "secondary": "#0058be",
+                        "tertiary-container": "#6e7583",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed": "#d8e2ff",
+                        "outline": "#747687"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "9999px",
+                        "lg": "9999px",
+                        "xl": "9999px",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    },
+                    "animation": {
+                        "logo-pulse": "logo-pulse 3s ease-in-out infinite",
+                        "text-reveal": "text-reveal 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards",
+                        "bar-fill": "bar-fill 2s ease-in-out infinite"
+                    },
+                    "keyframes": {
+                        "logo-pulse": {
+                            "0%, 100%": { transform: "scale(1)", boxShadow: "0 12px 32px rgba(79,109,255,0.1)" },
+                            "50%": { transform: "scale(1.05)", boxShadow: "0 20px 48px rgba(79,109,255,0.2)" }
+                        },
+                        "text-reveal": {
+                            "0%": {
+                                transform: "translateY(-40px) scale(0.85)",
+                                opacity: "0",
+                                filter: "blur(8px)"
+                            },
+                            "100%": {
+                                transform: "translateY(0) scale(1)",
+                                opacity: "1",
+                                filter: "blur(0)"
+                            }
+                        },
+                        "bar-fill": {
+                            "0%": { transform: "translateX(-100%)" },
+                            "100%": { transform: "translateX(200%)" }
+                        }
+                    }
+                },
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-mesh {
+            background-color: #f7f9fb;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(79, 109, 255, 0.05) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(33, 112, 228, 0.08) 0px, transparent 50%);
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+        .animate-logo-pulse {
+            animation: logo-pulse 3s ease-in-out infinite;
+        }
+        .animate-text-reveal {
+            animation: text-reveal 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+            animation-delay: 0.1s;
+            opacity: 0;
+        }
+        .animate-bar-fill {
+            animation: bar-fill 2s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface overflow-hidden">
+<a class="relative min-h-screen w-full flex flex-col items-center justify-center bg-mesh cursor-pointer block" href="{{DATA:SCREEN:SCREEN_3}}">
+<!-- Background Elements -->
+<div class="absolute inset-0 z-0 overflow-hidden opacity-40">
+<div class="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] bg-primary/10 blur-[120px] rounded-full"></div>
+<div class="absolute -bottom-[10%] -right-[10%] w-[40%] h-[40%] bg-secondary/10 blur-[120px] rounded-full"></div>
+</div>
+<!-- Central Content Container -->
+<div class="relative z-10 flex flex-col items-center">
+<!-- Logo Icon (Front Layer for the animation effect) -->
+<div class="relative z-30 mb-8 flex items-center justify-center w-24 h-24 bg-surface-container-lowest rounded-full shadow-[0_12px_32px_rgba(25,28,30,0.06)] p-1 animate-logo-pulse">
+<div class="w-full h-full bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary text-5xl" style="font-variation-settings: 'FILL' 1;">explore</span>
+</div>
+</div>
+<!-- Animated Text (Starts "behind" and moves "forward") -->
+<div class="text-center animate-text-reveal z-20">
+<h1 class="font-headline text-5xl md:text-6xl font-extrabold tracking-tighter text-primary">
+                    diS_Cover
+                </h1>
+<p class="font-label text-on-surface-variant tracking-[0.2em] text-xs font-semibold mt-4 uppercase">
+                    The Digital Curator
+                </p>
+</div>
+</div>
+<!-- Footer Elements -->
+<div class="absolute bottom-16 left-0 w-full px-8 flex flex-col items-center gap-6">
+<div class="w-16 h-[3px] bg-surface-container-highest rounded-full overflow-hidden relative">
+<div class="absolute inset-0 w-1/2 h-full bg-primary rounded-full animate-bar-fill"></div>
+</div>
+<div class="flex items-center gap-3">
+<span class="font-label text-[10px] text-on-surface-variant font-medium tracking-widest">INTER-COLLEGE NETWORK</span>
+</div>
+</div>
+<!-- Subtle Screen Border -->
+<div class="absolute inset-0 z-40 pointer-events-none border-[1rem] border-surface-container-low/20"></div>
+</a>
+<!-- Texture Overlay -->
+<div class="fixed inset-0 pointer-events-none z-50">
+<div class="absolute top-0 left-0 w-full h-full" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuChv-ev7N3umewGq2xwJs0qWB-QLMtufSoL9qi4DkXm0VRP3VIsn02FgYIu3JgEG_9ivkQYWkY9USC33ixDMFwNjabTbD4QBVn4hSZ6Jo0uA1Z8n7k-oq9rhF5gj4qzHAlogm0TudHjK4i4gNw6XkWOYdkC8Db_D_Sh38_cu5WnoBbudIfpioVeWhuU1spn3Ldt3evJCThEY1pZyWPciKz7qw7Z625SiKEMWXJDRUWUCny8ZsNwQ9tlad-31T0gZj4GD_NO0hc_vlM'); opacity: 0.02;"></div>
+</div>
+</body></html>

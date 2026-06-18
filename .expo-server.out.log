@@ -1,0 +1,18 @@
+Networking has been disabled
+Starting project at C:\Users\Chethan\Documents\Dis-cover-new
+React Compiler enabled
+Metro is running in CI mode, reloads are disabled. Remove CI=true to enable watch mode.
+Starting Metro Bundler
+Waiting on http://localhost:8081
+Logs for your project will appear below.
+iOS node_modules\expo-router\entry.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
+iOS node_modules\expo-router\entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓░░░ 85.4% (1790/1937)
+iOS Bundled 4233ms node_modules\expo-router\entry.js (2182 modules)
+iOS node_modules\expo-router\entry.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
+iOS Bundled 343ms node_modules\expo-router\entry.js (1 module)
+Android node_modules\expo-router\entry.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
+Android node_modules\expo-router\entry.js ▓▓▓▓▓▓▓▓▓▓▓▓░░░░ 80.5% (1716/1912)
+Android Bundled 4509ms node_modules\expo-router\entry.js (2177 modules)
+ WARN  [Layout children]: No route named "create" exists in nested children: ["alerts", "calendar", "explore", "index", "profile"]
+ WARN  setLayoutAnimationEnabledExperimental is currently a no-op in the New Architecture.
+ WARN  [Layout children]: No route named "create" exists in nested children: ["alerts", "calendar", "explore", "index", "profile"]

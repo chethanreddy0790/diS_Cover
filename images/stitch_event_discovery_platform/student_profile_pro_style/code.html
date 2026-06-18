@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Profile - diS_Cover</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&amp;family=Manrope:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#2c4de1",
+                        "surface": "#f7f9fb",
+                        "tertiary": "#555c6a",
+                        "surface-container": "#eceef0",
+                        "tertiary-fixed-dim": "#c0c7d6",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#404754",
+                        "on-secondary-fixed-variant": "#004395",
+                        "on-tertiary-container": "#fefcff",
+                        "on-primary-fixed-variant": "#0031c5",
+                        "surface-dim": "#d8dadc",
+                        "on-error-container": "#93000a",
+                        "on-surface-variant": "#444655",
+                        "surface-container-highest": "#e0e3e5",
+                        "tertiary-container": "#6e7583",
+                        "on-primary-container": "#fffbff",
+                        "inverse-primary": "#bac3ff",
+                        "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#eff1f3",
+                        "secondary-fixed-dim": "#adc6ff",
+                        "on-secondary-container": "#fefcff",
+                        "error": "#ba1a1a",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#151c27",
+                        "surface-variant": "#e0e3e5",
+                        "primary-container": "#4766f8",
+                        "outline-variant": "#c4c5d8",
+                        "on-background": "#191c1e",
+                        "primary": "#284ade",
+                        "secondary-fixed": "#d8e2ff",
+                        "primary-fixed-dim": "#bac3ff",
+                        "secondary-container": "#2170e4",
+                        "error-container": "#ffdad6",
+                        "secondary": "#0058be",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#dce2f3",
+                        "surface-container-high": "#e6e8ea",
+                        "primary-fixed": "#dee1ff",
+                        "surface-container-low": "#f2f4f6",
+                        "surface-bright": "#f7f9fb",
+                        "on-primary-fixed": "#001159",
+                        "on-secondary-fixed": "#001a42",
+                        "on-secondary": "#ffffff",
+                        "background": "#f7f9fb",
+                        "inverse-surface": "#2d3133",
+                        "on-surface": "#191c1e",
+                        "outline": "#747687"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-header {
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+        .cloud-shadow {
+            box-shadow: 0 12px 32px 0 rgba(25, 28, 30, 0.06);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- TopAppBar -->
+<header class="bg-[#f7f9fb]/80 dark:bg-slate-900/80 backdrop-blur-xl docked full-width top-0 sticky z-50 flex items-center justify-between px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-slate-200/50 transition-colors Active: scale-95 duration-200">
+<span class="material-symbols-outlined text-[#284ade]">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold text-[#191c1e] font-headline tracking-tight">Profile</h1>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-slate-200/50 transition-colors">
+<span class="material-symbols-outlined text-[#284ade]">more_vert</span>
+</button>
+</header>
+<main class="max-w-2xl mx-auto px-6 pb-24">
+<!-- Profile Header Section -->
+<section class="mt-8 flex flex-col items-center text-center">
+<div class="relative mb-6">
+<div class="w-32 h-32 rounded-full overflow-hidden border-4 border-surface-container-lowest cloud-shadow">
+<img alt="Aryan Verma" class="w-full h-full object-cover" data-alt="close-up portrait of a young professional Indian man smiling warmly, studio lighting with a clean soft grey background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCi5m9I9jqOLcX2a9Ga7MFeEBe91g0lzad1OiI9WfuaS0x5M4TqmlydBkofQdhvXA3jH_TCgTlDh33Wm8MFEDeALfYZiaiTIIO9_Ng2Y2C7UWY3sjsQT_nsKohFW_8X7B1qBkfMZTh0w4jMgYfB9fJnJShtyDPJwT0x8Mw_Uu4RwUrJaJl3JQYJikO0wtz8hhaOy9dmRvmBfE42yTbGGgWF78K9Nl_swwIpBuZgqmqOPnMq8DPA0YBZWhwMWFhmDyG9YZVspsTd7JA"/>
+</div>
+<div class="absolute bottom-1 right-1 bg-primary p-1.5 rounded-full border-2 border-white">
+<span class="material-symbols-outlined text-white text-xs" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<h2 class="text-3xl font-headline font-extrabold tracking-tight text-on-surface">Aryan Verma</h2>
+<p class="text-secondary font-medium mt-1">UI/UX Designer | Web Developer</p>
+<div class="flex items-center gap-4 mt-4">
+<div class="flex items-center gap-1 bg-surface-container-lowest px-3 py-1.5 rounded-full cloud-shadow">
+<span class="material-symbols-outlined text-yellow-500 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-bold text-on-surface">4.8</span>
+<span class="text-xs text-on-surface-variant font-medium">(124 reviews)</span>
+</div>
+<div class="bg-surface-container-lowest px-3 py-1.5 rounded-full cloud-shadow">
+<span class="text-sm font-bold text-on-surface">56</span>
+<span class="text-xs text-on-surface-variant font-medium ml-1">Gigs Completed</span>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex w-full gap-4 mt-8">
+<button class="flex-1 bg-gradient-to-br from-primary to-primary-container text-white py-4 px-6 rounded-xl font-bold flex items-center justify-center gap-2 Active:scale-95 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">work</span>
+                    Hire Me
+                </button>
+<button class="flex-1 bg-surface-container-lowest text-primary py-4 px-6 rounded-xl font-bold flex items-center justify-center gap-2 border border-outline-variant/15 cloud-shadow Active:scale-95 transition-transform">
+<span class="material-symbols-outlined">mail</span>
+                    Message
+                </button>
+</div>
+</section>
+<!-- About Me Section -->
+<section class="mt-12">
+<h3 class="text-xl font-headline font-bold text-on-surface mb-4">About Me</h3>
+<div class="bg-surface-container-lowest p-6 rounded-lg cloud-shadow">
+<p class="text-on-surface-variant leading-relaxed font-body">
+                    I am a passionate UI/UX Designer and Frontend Developer with 3+ years of experience in creating intuitive digital experiences. Currently a Final Year student at IIT Delhi, I specialize in building modern, responsive applications that bridge the gap between aesthetics and functionality. <a class="text-primary font-bold ml-1" href="#">Read More</a>
+</p>
+</div>
+</section>
+<!-- Skills Section -->
+<section class="mt-10">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-xl font-headline font-bold text-on-surface">Skills</h3>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer">edit</span>
+</div>
+<div class="flex flex-wrap gap-3">
+<div class="px-5 py-2.5 bg-primary text-white rounded-full font-bold text-sm">UI Design</div>
+<div class="px-5 py-2.5 bg-surface-container-highest text-on-surface rounded-full font-medium text-sm hover:bg-surface-container-low transition-colors">React.js</div>
+<div class="px-5 py-2.5 bg-surface-container-highest text-on-surface rounded-full font-medium text-sm hover:bg-surface-container-low transition-colors">Figma</div>
+<div class="px-5 py-2.5 bg-surface-container-highest text-on-surface rounded-full font-medium text-sm hover:bg-surface-container-low transition-colors">HTML/CSS</div>
+<div class="px-5 py-2.5 bg-surface-container-highest text-on-surface rounded-full font-medium text-sm hover:bg-surface-container-low transition-colors">Prototyping</div>
+<div class="px-5 py-2.5 bg-surface-container-highest text-on-surface rounded-full font-medium text-sm hover:bg-surface-container-low transition-colors">Tailwind CSS</div>
+</div>
+</section>
+<!-- My Gigs Section -->
+<section class="mt-12">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-xl font-headline font-bold text-on-surface">My Gigs</h3>
+<a class="text-primary font-bold text-sm" href="#">View All</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Gig Card 1 -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden cloud-shadow group flex flex-col">
+<div class="h-32 overflow-hidden">
+<img alt="Modern App Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="clean minimal mobile app UI mockups displayed on a professional digital interface, vibrant blue and white color palette" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCu_w5lnY4ZCRforJfuRQ29xGAtrv1LrCf0oaO_HGlYFlSbV6k8_PyUk2NY3J_m_e6XQrFavBzySvkhQOjsntuLYf2u_1LN21VSeO3VzW1mIeIVdmPq61WhqoGc9G2u0iDHrdI4VEUdHvaRFynDlOtZurzSWB7_CYUFDwl7tjf-FpB0ac_0E3q9OeD3F89CJvCsgMJwoT3E7UFjKXTLbJDI0tJOGizSEUO1hAS0W6c4nKOINwLs9kV0EOMZN3SVxwigpjJUOfUHEQ"/>
+</div>
+<div class="p-5 flex flex-col flex-grow">
+<span class="text-[10px] font-bold tracking-widest text-primary uppercase mb-2">DESIGN</span>
+<h4 class="font-headline font-bold text-on-surface leading-snug mb-3">Modern App UI Design</h4>
+<div class="flex items-center justify-between mt-auto pt-4 border-t border-surface-container">
+<div>
+<p class="text-[10px] text-on-surface-variant font-medium">Starts from</p>
+<p class="font-extrabold text-primary">$49</p>
+</div>
+<button class="bg-surface-container text-on-surface-variant px-4 py-2 rounded-full font-bold text-xs hover:bg-primary hover:text-white transition-colors">View Gig</button>
+</div>
+</div>
+</div>
+<!-- Gig Card 2 -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden cloud-shadow group flex flex-col">
+<div class="h-32 overflow-hidden">
+<img alt="Web Development" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="high-quality shot of a macbook showing clean code snippets on screen, soft office lighting with green plants in bokeh background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAl0fnV-9OoMlQ-FoDlhT12jZp91-rfJ6VZSZTA2vMolurwBT17MbzXJuxkHPd94tU0ZNYu_5nHmX1-JKwUWTEvUqh41zE9kmrxhf29bCPTRoj9u492ng_sdHgLslej9BxRNIlvLdvhOVq7fQ9vZzZjqzR1_2XKi33bVtxHr4XvQS-S1Ao_h1JPz26qbqyWgQJJ1O2H0Hw2ysagO3hVV7AyFnJZwYPqpRH20GMmlFnNI6aLcYPOI2pGK_frPZs85U9BXzQXco8cBhs"/>
+</div>
+<div class="p-5 flex flex-col flex-grow">
+<span class="text-[10px] font-bold tracking-widest text-primary uppercase mb-2">DEVELOPMENT</span>
+<h4 class="font-headline font-bold text-on-surface leading-snug mb-3">Responsive Website Build</h4>
+<div class="flex items-center justify-between mt-auto pt-4 border-t border-surface-container">
+<div>
+<p class="text-[10px] text-on-surface-variant font-medium">Starts from</p>
+<p class="font-extrabold text-primary">$120</p>
+</div>
+<button class="bg-surface-container text-on-surface-variant px-4 py-2 rounded-full font-bold text-xs hover:bg-primary hover:text-white transition-colors">View Gig</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio Section -->
+<section class="mt-12">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-xl font-headline font-bold text-on-surface">Portfolio</h3>
+<span class="material-symbols-outlined text-on-surface-variant">grid_view</span>
+</div>
+<div class="grid grid-cols-3 gap-3">
+<div class="aspect-square rounded-md overflow-hidden cloud-shadow cursor-pointer">
+<img alt="Project 1" class="w-full h-full object-cover hover:opacity-80 transition-opacity" data-alt="top-down view of a designer's desk with tablet, notebook, and wireframes, soft afternoon sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLHBeFVVGa_B80e08wnqbx8Zja_CgEMrpy89e0XRLfM4whCiQVny0mWr1e2WmEkmmzoKf4vSTcuu8z_3apnpaXqachNERH-0mdn9iIeBPDHn9T0t3AoRvV45OV8_JWtq8K8-d5PZmztHNln6uFiFg9-n_WMnAUmCbMjUspfKvxBxjhMSftteR9f67VvpqvFXOQcEQ7eOA89yyMEMsCg3CkNmSdhjqw8hjDU0Te_GO1YjWzdyesVeuGRi33MZs1L_6EgbxvJcQghmE"/>
+</div>
+<div class="aspect-square rounded-md overflow-hidden cloud-shadow cursor-pointer">
+<img alt="Project 2" class="w-full h-full object-cover hover:opacity-80 transition-opacity" data-alt="clean flat-lay of mobile application screens printed on high-quality paper, creative workspace aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwaY9HXZrqJm77v4hbE0Ull_oQZGUGmwLCBkkjuzKgcD3q9vJypslW9MEF8e0tLrDNPmipdWSdznE65DmzOet9I7SLtkn1FNKyJ64UUTZn3d84Z4tpbOwQtBh0bU_12leZfoYPtrN7-DZ-0ByAOqslaxhpAEP7ICezkZ1aXreiKN0OPm9DuF8a11wwz8mTo9E2fWLCCG04rHZ3IQ4ehGNoC0G5sge1wH4LMZ_ZCinUBerHGgiLCCAIdyXgIV9VqBeGNQtaK-8IZhI"/>
+</div>
+<div class="aspect-square rounded-md overflow-hidden cloud-shadow cursor-pointer">
+<img alt="Project 3" class="w-full h-full object-cover hover:opacity-80 transition-opacity" data-alt="dynamic close-up of colorful data visualization charts on a laptop screen, vibrant modern interface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB70NAYU86ZJMWvUXKQkgWWKYpfOsws1Mrze710fw6Xo9qYHfAxWLPDyrYMGcm7_bw3YMS9Dg0rI2DCXuihDLg_O79KquB8B86lajq0ovY04P6Wnp4a2c-v0m9kkQMb0NAONj9QENVyeeurbjfIxGgfs1pB-2DQ5oNRZU3o2MghyTgy7Bjz-R2ZPiXWWif3npO5x6mREbEW66FOy3YxyyG1Eo-Na1PoidU7pkqrdJGn6a_5Heg3Q0ubVTBBIru8maQRuz1ybhUFAZQ"/>
+</div>
+</div>
+</section>
+<!-- Additional Info -->
+<section class="mt-12 mb-8 bg-surface-container-low p-6 rounded-lg border border-outline-variant/10">
+<h4 class="font-headline font-bold text-on-surface mb-4">Availability</h4>
+<div class="flex items-center gap-3 text-on-surface-variant mb-4">
+<span class="material-symbols-outlined text-primary">schedule</span>
+<span class="text-sm">Available for Full-Time &amp; Freelance</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span class="text-sm">New Delhi, India</span>
+</div>
+</section>
+</main>
+</body></html>
