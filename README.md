@@ -161,6 +161,7 @@ Current application modules include:
 
 - **Chethan Reddy A**
 - **Suhasi Bindu D**
+
 Bachelor of Computer Applications (BCA)
 
 Academic Year: 2025–2026
