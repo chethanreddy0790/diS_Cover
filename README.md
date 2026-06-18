@@ -1,50 +1,174 @@
-# Welcome to your Expo app 👋
+﻿# Dis-cover
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+[![Expo](https://img.shields.io/badge/Expo-54.0.35-4d85d4?logo=expo&logoColor=white)](https://expo.dev)
+[![React Native](https://img.shields.io/badge/React%20Native-0.81.5-61dafb?logo=react)](https://reactnative.dev)
+[![Firebase](https://img.shields.io/badge/Firebase-10.14.1-orange?logo=firebase)](https://firebase.google.com)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.9.2-blue?logo=typescript)](https://www.typescriptlang.org)
 
-## Get started
+## Project Overview
 
-1. Install dependencies
+**Dis-cover** is a comprehensive campus networking and collaboration platform built with Expo and React Native. Designed as a final-year project, it enables college students to connect with their campus community through events, stories, gig listings, profiles, and notifications in a unified mobile experience.
 
-   ```bash
-   npm install
-   ```
+The project uses **Expo Router** for file-based navigation, **Zustand** for state management, and **Firebase** for authentication and backend data persistence. It targets Android, iOS, and web platforms via Expo.
 
-2. Start the app
+## Features
 
-   ```bash
-   npx expo start
-   ```
+- College email-based authentication and profile onboarding
+- Event discovery feed with search and category filtering
+- Story feed with student story viewing
+- Gig marketplace for posting and browsing student gigs
+- Student profile and settings management
+- Firebase Auth and Firestore integration
+- Mobile-first UI with Expo components and React Native Paper
+- Responsive navigation with bottom tabs and drawer menu
 
-In the output, you'll find options to open the app in a
+## Technology Stack
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+| Category | Technology |
+| --- | --- |
+| Framework | Expo / React Native |
+| Navigation | Expo Router, React Navigation Bottom Tabs |
+| State Management | Zustand |
+| Backend | Firebase Auth, Firestore |
+| UI / Styling | React Native Paper, Expo Vector Icons |
+| Data / Utilities | Date-fns, Expo Image Picker, Expo Notifications |
+| Tooling | TypeScript, Babel, ESLint |
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Folder Structure
 
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```text
+Dis-cover
+├── app
+│   ├── (tabs)
+│   │   ├── _layout.tsx
+│   │   ├── alerts.tsx
+│   │   ├── calendar.tsx
+│   │   ├── create.tsx
+│   │   ├── explore.tsx
+│   │   ├── index.tsx
+│   │   └── profile.tsx
+│   ├── _layout.tsx
+│   ├── index.tsx
+│   ├── login.tsx
+│   ├── create-event.tsx
+│   ├── create-gig.tsx
+│   ├── create-story.tsx
+│   ├── event-details
+│   ├── gig-details
+│   ├── stories
+│   ├── user-profile
+│   ├── settings.tsx
+│   └── privacy-settings.tsx
+├── assets
+│   └── images
+├── components
+│   ├── cards
+│   ├── common
+│   ├── drawer
+│   ├── feed
+│   ├── gig-space
+│   ├── profile
+│   ├── settings
+│   └── ui
+├── constants
+├── data
+├── hooks
+├── images
+├── navigation
+├── screens
+│   ├── auth
+│   ├── create
+│   ├── feed
+│   ├── notifications
+│   ├── profile
+│   └── search
+├── services
+├── store
+├── theme
+├── types
+└── utils
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Installation
 
-## Learn more
+1. Clone the repository
 
-To learn more about developing your project with Expo, look at the following resources:
+```bash
+git clone https://github.com/chethanreddy0790/diS_Cover.git
+cd diS_Cover
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+2. Install dependencies
 
-## Join the community
+```bash
+npm install
+```
 
-Join our community of developers creating universal apps.
+3. Start the Expo development server
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```bash
+npx expo start
+```
+
+4. Run the app
+
+- Press `a` for Android
+- Press `i` for iOS
+- Press `w` for web
+
+## Environment Variables
+
+Create a `.env` file from `.env.example` and add your Firebase credentials.
+
+```env
+EXPO_PUBLIC_FIREBASE_API_KEY=
+EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN=
+EXPO_PUBLIC_FIREBASE_PROJECT_ID=
+EXPO_PUBLIC_FIREBASE_STORAGE_BUCKET=
+EXPO_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=
+EXPO_PUBLIC_FIREBASE_APP_ID=
+
+EXPO_PUBLIC_CLOUDINARY_CLOUD_NAME=dwl7rtcct
+EXPO_PUBLIC_CLOUDINARY_UPLOAD_PRESET=discover_unsigned
+```
+
+> Do not commit `.env` or expose secret keys in source control.
+
+## Screenshots
+
+Screenshots of the application will be added soon.
+
+Current application modules include:
+
+- Authentication
+- Home Feed
+- Stories
+- Events
+- Gig Space
+- User Profile
+- Notifications
+
+## Future Enhancements
+
+- Add real-time messaging and chat features
+- Support push notifications and event reminders
+- Enable social login providers
+- Add calendar sync for events
+- Enhance story creation with media upload workflows
+- Add analytics and performance monitoring
+
+## Developers
+
+- **Chethan Reddy A**
+- **Suhasi Bindu D**
+Bachelor of Computer Applications (BCA)
+
+Academic Year: 2025–2026
+
+Institution: Christ Academy Institute For Advanced Studies
+
+Project Type: Final Year Major Project
+
+## License
+
+No license is currently defined for this repository. Add a `LICENSE` file to specify reuse and distribution terms.
